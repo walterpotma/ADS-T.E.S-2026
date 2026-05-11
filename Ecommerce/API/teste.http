@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/produto
+
+###
+
+POST http://localhost:8080/api/produto
+Content-Type: application/json
+
+{
+    "Name": "Mouse",
+    "Price": 10
+}
+
+###
+GET http://localhost:8080/api/produto/8e0a365e-b736-4a8c-8c3b-c5e6c32adf45

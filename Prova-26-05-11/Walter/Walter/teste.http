@@ -1,0 +1,51 @@
+### Para testar se está rodando o projeto
+GET http://localhost:8080
+
+### Cadastro de produto 1
+POST http://localhost:8080/api/livro/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Clean Code",
+  "autor": "Robert C. Martin"
+}
+### Cadastro de produto 2
+POST http://localhost:8080/api/livro/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Domain-Driven Design",
+  "autor": "Eric Evans"
+}
+### Cadastro de produto 3
+POST http://localhost:8080/api/livro/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Patterns of Enterprise Application Architecture",
+  "autor": "Martin Fowler"
+}
+
+### listagem de todos os livros cadastrados
+GET http://localhost:8080/api/livro/listar
+
+### listagem de um livro pelo nome dele
+GET http://localhost:8080/api/livro/buscar/Clean Code
+
+### emprestimo de um livro 1
+PUT http://localhost:8080/api/livro/emprestar/Clean Code
+
+### emprestimo de um livro 2
+PUT http://localhost:8080/api/livro/emprestar/Domain-Driven Design
+
+### emprestimo de um livro 3
+PUT http://localhost:8080/api/livro/emprestar/Patterns of Enterprise Application Architecture
+
+### devolução de um livro
+PUT http://localhost:8080/api/livro/devolver/Clean Code
+
+### listagem de todos os livros disponiveis
+GET http://localhost:8080/api/livro/disponiveis
+
+### listagem de todos os livros emprestados
+GET http://localhost:8080/api/livro/emprestados
